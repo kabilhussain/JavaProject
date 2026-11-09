@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<ruleset name="buggy-app"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+  <description>Broad PMD ruleset minus the noisiest stylistic rules.</description>
+
+  <rule ref="category/java/bestpractices.xml">
+    <exclude name="SystemPrintln"/>
+    <exclude name="GuardLogStatement"/>
+  </rule>
+  <rule ref="category/java/errorprone.xml">
+    <exclude name="AvoidLiteralsInIfCondition"/>
+    <exclude name="AvoidDuplicateLiterals"/>
+  </rule>
+  <rule ref="category/java/security.xml"/>
+  <rule ref="category/java/multithreading.xml">
+    <exclude name="UseConcurrentHashMap"/>
+    <exclude name="DoNotUseThreads"/>
+  </rule>
+  <rule ref="category/java/performance.xml"/>
+  <rule ref="category/java/design.xml">
+    <exclude name="LawOfDemeter"/>
+    <exclude name="LoosePackageCoupling"/>
+    <exclude name="DataClass"/>
+    <exclude name="UseUtilityClass"/>
+    <exclude name="TooManyMethods"/>
+    <exclude name="GodClass"/>
+    <exclude name="ExcessiveImports"/>
+    <exclude name="CouplingBetweenObjects"/>
+    <exclude name="AvoidThrowingRawExceptionTypes"/>
+    <exclude name="SignatureDeclareThrowsException"/>
+  </rule>
+  <rule ref="category/java/codestyle.xml/UnnecessaryImport"/>
+  <rule ref="category/java/codestyle.xml/MethodNamingConventions"/>
+  <rule ref="category/java/codestyle.xml/FieldNamingConventions"/>
+  <rule ref="category/java/codestyle.xml/UselessParentheses"/>
+</ruleset>
